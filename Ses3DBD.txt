@@ -1,0 +1,13 @@
+-- Ejercicio 1
+create table temporada(
+nombre varchar(5) constraint pk_temporada primary key);
+
+create table categoria(
+nombre varchar(2),
+descripcion varchar(80),
+supMin number(4,2),
+supMax number(4,2),
+constraint pk_categoria primary key(nombre),
+constraint ck_categoria_nombre check(nombre in ('D','DT','I','S'))
+);
+
